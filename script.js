@@ -1,11 +1,11 @@
 'use strict';
 
 let colorClicked = document.querySelector('#colorClicked');
-let red = document.querySelector('#red');
+let red = document.querySelector('.red');
 let redT = document.querySelector('#redT');
-let yellow = document.querySelector('#yellow');
+let yellow = document.querySelector('.yellow');
 let yellowT = document.querySelector('#yellowT');
-let green = document.querySelector('#green');
+let green = document.querySelector('.green');
 let greenT = document.querySelector('#greenT');
 let getColor= document.querySelector('#getColor');
 
@@ -29,5 +29,5 @@ green.addEventListener('click', (evt) => {
   clickCounter['greenL'] +=1;
   colorClicked.innerHTML = 'green';
   getColor.innerHTML = window.getComputedStyle(green, null).getPropertyValue('background');
-  greenT.innerHTML = "Red: " + Object.values(clickCounter)[0] + " times";
+  greenT.innerHTML = "Green: " + Object.values(clickCounter)[0] + " times";
 });
