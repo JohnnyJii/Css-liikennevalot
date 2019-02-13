@@ -1,45 +1,33 @@
-const clickCounter = {
-  red: 0,
-  yellow: 0,
-  green: 0,
-};
+'use strict';
 
-const countRed = 0;
-const countYellow = 0;
-const countGreen = 0;
+let colorClicked = document.querySelector('#colorClicked');
+let red = document.querySelector('#red');
+let redT = document.querySelector('#redT');
+let yellow = document.querySelector('#yellow');
+let yellowT = document.querySelector('#yellowT');
+let green = document.querySelector('#green');
+let greenT = document.querySelector('#greenT');
+let getColor= document.querySelector('#getColor');
 
+const clickCounter = {redL: 0, yellowL: 0, greenL:0};
 
-const redButton = document.querySelector('.red');
-const yellowButton = document.querySelector('.yellow');
-const greenButton = document.querySelector('.green');
-const displayCount = document.querySelector('.displayCount');
-const box = document.querySelector('#box');
-
-redButton.addEventListener('click', (evt) => {
-  console.log('punainen');
-  box.innerHTML = 'punainen' + Object.values(clickCounter)[0];
-  clickCounter['red'] +=1;
-  console.log(clickCounter);
+red.addEventListener('click', (evt) => {
+  clickCounter['redL'] +=1;
+  colorClicked.innerHTML = 'red';
+  getColor.innerHTML = window.getComputedStyle(red, null).getPropertyValue('background');
+  redT.innerHTML = "Red: " + Object.values(clickCounter)[0] + " times";
 });
 
-
-
-yellowButton.addEventListener('click', (evt) => {
-  console.log('keltainen');
-  box.innerHTML = 'keltainen' + Object.values(clickCounter)[0];
-clickCounter ['yellow'] +=1;
-console.log(clickCounter);
+yellow.addEventListener('click', (evt) => {
+  clickCounter['yellowL'] +=1;
+  colorClicked.innerHTML = 'yellow';
+  getColor.innerHTML = window.getComputedStyle(yellow, null).getPropertyValue('background');
+  yellowT.innerHTML = "Yellow: " + Object.values(clickCounter)[0] + " times";
 });
 
-
-greenButton.addEventListener('click', (evt) => {
-  console.log('vihreä');
-  box.innerHTML = 'vihreä' + Object.values(clickCounter)[0];
-clickCounter ['green'] +=1;
-console.log(clickCounter);
+green.addEventListener('click', (evt) => {
+  clickCounter['greenL'] +=1;
+  colorClicked.innerHTML = 'green';
+  getColor.innerHTML = window.getComputedStyle(green, null).getPropertyValue('background');
+  greenT.innerHTML = "Red: " + Object.values(clickCounter)[0] + " times";
 });
-
-
-
-
-

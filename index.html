@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Liikennevalot</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
 
 <div class="trafficlight">
     <div class="protector"></div>
@@ -23,14 +22,21 @@
     <div class="earth3"></div>
     <div class="earth4"></div>
     <div class="displayCount"></div>
+
     <div id="box">
-        <h3>You clicked</h3>
-        <p>Red</p>
-        <p>Yellow</p>
-        <p>Green</p>
-        <h4>Color</h4>
-        <p>this many times</p>
+        <div class="text">
+            <h3>You clicked: </h3>
+            <p id="colorClicked"></p></div>
+        </br>
+        <p>Color:</p>
+        <p id="getColor"></p>
+        </br>
+        <h3>Times:</h3>
+        <p id="redT"></p>
+        <p id="yellowT"></p>
+        <p id="greenT"></p>
     </div>
+</div>
 </div>
 
 <script src="script.js"></script>
